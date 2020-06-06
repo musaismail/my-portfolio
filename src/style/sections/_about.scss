@@ -1,3 +1,47 @@
+.image{
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 40px auto;
+  .circle-1{
+      position: absolute;
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+      top: -10px;
+      left: -10px;
+      border-width: 4px;
+      border-style: solid;
+      border-color: $white-color transparent $white-color $white-color;
+      border-radius: 50%;
+      transition: all 1.5s ease-in-out;
+  }
+  .circle-2{
+      @extend .circle-1;
+      top: -20px;
+      left: -20px;
+      width: 220px;
+      height: 220px;
+      border-color: $white-color $white-color $white-color transparent;
+  }
+  img{
+      display: block;
+      border-radius: 50%;
+      background: #F5E8DF;
+  }
+  &:hover{
+      cursor: pointer;
+      
+      .circle-1{
+          transform: rotate(360deg);
+      }
+
+      .circle-2{
+          transform: rotate(-360deg);
+      }
+  }
+}
+
 #about {
   background-color: $primary-color;
   background-image: linear-gradient(
@@ -8,8 +52,6 @@
   color: $white-color;
   height: 100%;
   border-top: 0px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   padding-bottom: 10%;
 
   @include respond(tab-land) {

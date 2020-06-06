@@ -1,3 +1,47 @@
+// .image{
+//   position: relative;
+//   width: 120px;
+//   height: 120px;
+//   margin: 40px auto;
+//   .circle-1{
+//       position: absolute;
+//       box-sizing: border-box;
+//       width: 140px;
+//       height: 140px;
+//       top: -10px;
+//       left: -10px;
+//       border-width: 4px;
+//       border-style: solid;
+//       border-color: $secondary-color transparent $secondary-color $secondary-color;
+//       border-radius: 50%;
+//       transition: all 1.5s ease-in-out;
+//   }
+//   .circle-2{
+//       @extend .circle-1;
+//       top: -20px;
+//       left: -20px;
+//       width: 160px;
+//       height: 160px;
+//       border-color: $secondary-color $secondary-color $secondary-color transparent;
+//   }
+//   img{
+//       display: block;
+//       border-radius: 50%;
+//       background: #F5E8DF;
+//   }
+//   &:hover{
+//       cursor: pointer;
+      
+//       .circle-1{
+//           transform: rotate(360deg);
+//       }
+
+//       .circle-2{
+//           transform: rotate(-360deg);
+//       }
+//   }
+// }
+
 #hero {
   min-height: 100vh;
   height: 100vh;
@@ -15,12 +59,6 @@
   right: 0;
   z-index: -1;
 
-  // If you want to set a background image on the hero section, uncomment these with yout custom image
-
-  /* background: url("/src/assets/[your-image].png");
-  background-position: center;
-  background-size: cover; */
-
   @include respond(phone) {
     padding: 0rem $default-font-size;
   }
@@ -29,7 +67,10 @@
     font-size: 5.6rem;
     font-weight: 700;
     margin-bottom: 3.2rem;
-    text-align: left;
+    text-align: center;
+    .text-color-main{
+      color: $name-color;
+  }
 
     @include respond(tab-land) {
       font-size: 4rem;
@@ -49,6 +90,7 @@
 
   .hero-cta {
     display: flex;
+    justify-content: center;
 
     @include respond(tab-port) {
       justify-content: center;
