@@ -1,46 +1,50 @@
-// .image{
-//   position: relative;
-//   width: 120px;
-//   height: 120px;
-//   margin: 40px auto;
-//   .circle-1{
-//       position: absolute;
-//       box-sizing: border-box;
-//       width: 140px;
-//       height: 140px;
-//       top: -10px;
-//       left: -10px;
-//       border-width: 4px;
-//       border-style: solid;
-//       border-color: $secondary-color transparent $secondary-color $secondary-color;
-//       border-radius: 50%;
-//       transition: all 1.5s ease-in-out;
-//   }
-//   .circle-2{
-//       @extend .circle-1;
-//       top: -20px;
-//       left: -20px;
-//       width: 160px;
-//       height: 160px;
-//       border-color: $secondary-color $secondary-color $secondary-color transparent;
-//   }
-//   img{
-//       display: block;
-//       border-radius: 50%;
-//       background: #F5E8DF;
-//   }
-//   &:hover{
-//       cursor: pointer;
-      
-//       .circle-1{
-//           transform: rotate(360deg);
-//       }
+ .image{
+  position: relative;
+  width: 120px;
+  height: 120px;
+ margin: 40px auto;
+ 
+ .circle-1{
+      position: absolute;
+     box-sizing: border-box;
+    width: 140px;
+     height: 140px;
+      top: -10px;
+       left: -10px;
+       border-width: 4px;
+      border-style: solid;
+      border-color: brown transparent brown brown;
+      border-radius: 50%;
+      transition: all 1.5s ease-in-out;
+  }
+  .circle-2{
+     @extend .circle-1;
+     top: -20px;
+     left: -20px;
+     width: 160px;
+     height: 160px;
+     border-color:rgb(39,35,65) rgb(39,35,65) rgb(39,35,65)  transparent;
+  }
 
-//       .circle-2{
-//           transform: rotate(-360deg);
-//       }
-//   }
-// }
+  img{
+     display: block;
+      border-radius: 50%;
+       background: #F5E8DF;
+  }
+   &:hover{
+      cursor: pointer;
+   
+    .circle-1{
+        transform: rotate(360deg);
+     }
+
+     .circle-2{
+         transform: rotate(-360deg);
+     }
+    }
+  }
+
+
 
 #hero {
   min-height: 100vh;
@@ -48,7 +52,7 @@
   display: flex;
   align-items: center;
   border-bottom: 0px;
-  background: $white-color;
+  background: rgb(205, 214, 206);
   font-weight: 400;
   color: $dark-blue-text;
   padding: 0rem 5.6rem;
